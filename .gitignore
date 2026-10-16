@@ -1,0 +1,8 @@
+.DS_Store
+xcuserdata/
+DerivedData/
+build/
+*.xcuserstate
+# Downloaded by setup_python.sh (≈130 MB unpacked); not checked in.
+Python.xcframework/
+__pycache__/
