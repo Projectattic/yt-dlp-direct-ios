@@ -68,6 +68,7 @@ struct SettingsView: View {
                     Toggle("Allow playlists", isOn: $settingsStore.settings.allowPlaylists)
                     Toggle("Auto-fill copied YouTube links", isOn: $settingsStore.settings.autoPasteLinks)
                     Toggle("Keep screen on while downloading", isOn: $settingsStore.settings.keepScreenAwake)
+                    Toggle("Force IPv4", isOn: $settingsStore.settings.forceIPv4)
                     LabeledContent("Speed limit") {
                         TextField("none, e.g. 5M", text: $settingsStore.settings.rateLimit)
                             .multilineTextAlignment(.trailing)
@@ -77,7 +78,7 @@ struct SettingsView: View {
                 } header: {
                     Text("Downloads")
                 } footer: {
-                    Text("iOS pauses apps shortly after you leave them, so keep the app open for long downloads. Playlist and channel links add each video to the queue.")
+                    Text("iOS pauses apps shortly after you leave them, so keep the app open for long downloads. Playlist and channel links add each video to the queue. Force IPv4 can help if downloads are slow on mobile data.")
                 }
 
                 Section("About") {

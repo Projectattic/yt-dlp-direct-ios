@@ -44,6 +44,7 @@ struct AppSettings: Codable, Equatable {
     var autoPasteLinks = true
     var keepScreenAwake = true
     var rateLimit = ""
+    var forceIPv4 = false
 
     init() {}
 
@@ -63,6 +64,7 @@ struct AppSettings: Codable, Equatable {
         autoPasteLinks = v(.autoPasteLinks, d.autoPasteLinks)
         keepScreenAwake = v(.keepScreenAwake, d.keepScreenAwake)
         rateLimit = v(.rateLimit, d.rateLimit)
+        forceIPv4 = v(.forceIPv4, d.forceIPv4)
     }
 }
 

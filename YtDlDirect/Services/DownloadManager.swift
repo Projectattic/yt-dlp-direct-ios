@@ -218,6 +218,7 @@ final class DownloadManager {
             "cancel_path": cancelURL.path,
             "cache_dir": python.cacheURL.path,
             "rate_limit": settings.rateLimit,
+            "force_ipv4": settings.forceIPv4,
         ]
         if let h = job.quality.maxHeight { payload["max_height"] = h }
 

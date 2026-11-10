@@ -269,6 +269,9 @@ def _download(job):
         # Anything will do for the info step; the real choice happens below.
         "format": "b/bv*/ba*",
     }
+    # Some mobile networks are much slower to YouTube over IPv6 (yt-dlp's -4).
+    if job.get("force_ipv4"):
+        base["source_address"] = "0.0.0.0"
     rate = (job.get("rate_limit") or "").strip()
     if rate:
         limit = parse_bytes(rate)
